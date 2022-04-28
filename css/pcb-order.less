@@ -1,0 +1,682 @@
+/*导入公共样式*/
+@import "base-new.less";
+@import "../fonts/iconfont.css";
+@import "order-public.less";
+/*pcb模块开始*/
+
+.order-left .pcb-order .orders-right {
+  padding-left: 12px;
+}
+
+
+/*标志语提示*/
+.sign-text {
+  float: left;
+  margin-left: 20px;
+  color: #f43d3e;
+  line-height: 25px;
+}
+
+/*材料*/
+.material-box {
+  width: 610px;
+
+  .list {
+    margin-bottom: 10px;
+  }
+
+  .material-tips {
+    height: auto;
+    background-color: #ffffff;
+    float: left;
+    margin-left: 6px;
+    margin-top: 6px;
+
+    & > a {
+      color: #00aaee;
+    }
+
+  }
+}
+//测试
+//.test-item{
+//  width: 610px;
+//}
+/*板类型隐藏元素3.1*/
+.delivery-box {
+  background-color: #f5f5f5;
+  display: none;
+
+  .side-box {
+    float: left;
+
+    & > span {
+      float: left;
+      line-height: 28px;
+      margin: 0 5px;
+    }
+  }
+}
+
+
+.delivery-box .side-param {
+  float: left;
+  height: 30px;
+  margin-right: 14px;
+  width: 115px;
+}
+
+/*示例1*/
+.delivery-box .delivery-pic {
+  float: left;
+  color: #00aaee;
+  line-height: 25px;
+  border-bottom: 1px dashed #40aef2;
+  cursor: pointer;
+  margin-left: 10px;
+  position: relative;
+
+  & > i {
+    background: url("../images/pinban-two-img.png") no-repeat center;
+    width: 520px;
+    height: 300px;
+    position: absolute;
+    top: 28px;
+    left: -300px;
+    z-index: 99;
+    display: none;
+    transtion: all .3s;
+  }
+
+  &:hover i {
+    display: block;
+  }
+}
+
+
+/*示例2*/
+.delivery-box .demo-pic {
+  float: left;
+  color: #00aaee;
+  line-height: 25px;
+  border-bottom: 1px dashed #40aef2;
+  cursor: pointer;
+  margin-left: 10px;
+  position: relative;
+
+  & > i {
+    background: url("../images/pinban-three-img.png") no-repeat center;
+    width: 520px;
+    height: 300px;
+    position: absolute;
+    top: 28px;
+    left: -299px;
+    z-index: 99;
+    display: none;
+    transtion: all .3s;
+  }
+
+  &:hover i {
+    display: block;
+  }
+}
+
+
+/*板类型隐藏元素3.2*/
+.line-process {
+  background-color: #f5f5f5;
+  margin-top: 1px;
+  display: none;
+}
+
+/*显示隐藏元素添加类名 active-item*/
+.pcb-content .active-item {
+  display: block;
+}
+
+.pcb-content .size-item input {
+  width: 120px;
+  margin-right: 0;
+  float: left;
+}
+
+.pcb-content .size-item .take-flag {
+  float: left;
+  width: 30px;
+  height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border-top: 1px solid #dcdddd;
+  border-bottom: 1px solid #dcdddd;
+  background-color: #f7f8f8;
+}
+
+.pcb-content .size-item .iconfont {
+  font-size: 25px;
+}
+
+.pcb-content .size-item .right-margin {
+  border-right: 1px solid #dcdddd;
+}
+
+/*数量5*/
+.board-nums {
+  height: 230px;
+  background-color: #efefef;
+  width: 425px;
+  position: absolute;
+  top: 29px;
+  left: -1px;
+  display: none;
+  z-index: 10;
+  border: 1px solid #cfcfcf;
+}
+
+.boardnumber {
+  margin: 5px auto;
+  width: 408px;
+  .clearF;
+}
+
+.boardnumber > li {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  padding: 0 5px;
+  min-width: 40px;
+  text-align: center;
+  font-size: 12px;
+  background-color: #ffffff;
+  cursor: pointer;
+  float: left;
+  margin: 0 0 -1px -1px;
+  border: 1px solid #d5d5d5;
+
+  &:hover {
+    position: relative;
+    border: 1px solid #07813b;
+    z-index: 3;
+  }
+}
+
+.other-box {
+  width: 410px;
+  height: 30px;
+  border-radius: 2px;
+  background-color: #efefef;
+  margin: 25px 10px 0;
+
+  .other-input {
+    width: 95px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #d8d8d8;
+    color: #6E6E6E;
+    padding-left: 3px;
+    margin-right: 3px;
+  }
+
+  & > a {
+    display: inline-block;
+    padding: 0 10px;
+    height: 23px;
+    text-align: center;
+    line-height: 23px;
+    cursor: pointer;
+    border: 0;
+    font-size: 12px;
+    margin-left: 6px;
+    border-radius: 2px;
+    color: #fff;
+  }
+}
+
+
+.other-box .confirm-btn {
+  background: #271e1e;
+
+  &:hover {
+    background: #4c4242;
+  }
+}
+
+.other-box .cancel-btn {
+  background: #7B7B7B;
+
+  &:hover {
+    background: #9c9c9c;
+  }
+}
+
+
+/*层压说明*/
+.laminated-tips {
+  float: left;
+  line-height: 30px;
+  margin-left: 15px;
+  display: none;
+
+  & > a {
+    color: #00aaee;
+  }
+}
+
+/*第五项*/
+.layer-boxs {
+  background-color: #efefef;
+  min-height: 50px;
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  margin-right: 20px;
+
+  select {
+    margin-top: 15px;
+  }
+}
+
+/*弹窗遮罩选择板子数量*/
+.table-open {
+  padding: 20px 25px;
+  width: 520px;
+
+  & > p {
+    margin-bottom: 20px;
+  }
+}
+
+.table-open .getInput-box {
+  margin-bottom: 10px;
+
+  .getInput {
+    width: 300px;
+    height: 38px;
+    line-height: 38px;
+    text-indent: 15px;
+    border: 1px solid #cfcfcf;
+    margin-left: 20px;
+  }
+}
+
+.pcb-content .mcpcb {
+  display: none;
+  background-color: #efefef;
+
+  img {
+    float: left;
+    margin: 0 15px;
+  }
+}
+
+/*设计文件数*/
+.file-number span {
+  background-color: #f7f8f8;
+  border: 1px solid #dcdddd;
+  width: 30px;
+  height: 28px;
+  line-height: 25px;
+  display: inline-block;
+  float: left;
+  font-size: 18px;
+  text-align: center;
+  transition: all .3s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0b953a;
+    color: #ffffff;
+  }
+}
+
+.file-number input {
+  margin-right: 0;
+  float: left;
+  border-left: none;
+  border-right: none;
+  width: 50px;
+  text-indent: 0;
+  text-align: center;
+}
+
+/*颜色盒子*/
+.color-box {
+  width: 585px;
+}
+
+.color-box .list {
+  margin-bottom: 10px;
+}
+
+.character-color {
+  padding: 0;
+}
+
+.order-item .item-right .green, .red, .yellow, .blue, .white, .purple, .black, .matt-black, .matt-green {
+  width: 24px;
+  height: 20px;
+  display: inline-block;
+  float: left;
+  margin: 4px 5px 0 0;
+}
+
+.order-item .item-right {
+  .green {
+    background-color: green;
+  }
+
+  .red {
+    background-color: red;
+  }
+
+  .yellow {
+    background-color: yellow;
+  }
+
+  .blue {
+    background-color: blue;
+  }
+
+  .white {
+    background-color: #ffffff;
+    border: 1px solid #efefef;
+  }
+
+  .purple {
+    background-color: purple;
+  }
+
+  .black {
+    background-color: black;
+  }
+
+  .matt-black {
+    background-color: #767676;
+  }
+
+  .matt-green {
+    background-color: #56be59;
+  }
+}
+
+
+.bevel-box {
+  float: left;
+  display: none;
+}
+
+.bevel-text {
+  float: left;
+  margin: 4px 20px 0 10px;;
+}
+
+.add-order {
+  float: left;
+  margin-left: 20px;
+
+  input {
+    width: 120px;
+  }
+}
+
+/*上部分结束*/
+
+/*特殊工艺开始*/
+.special-process {
+  background-color: #f7f8f8;
+
+  .special-title {
+    height: 60px;
+    line-height: 60px;
+    background-color: #efefef;
+    font-size: 12px;
+    cursor: pointer;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+
+    .title-left, .title-right {
+      float: left;
+      width: 819px;
+    }
+  }
+}
+
+.special-process .special-title .title-left {
+  width: 60px;
+  border-right: 1px solid #efefef;
+  background-color: #ffffff;
+}
+
+.special-process .special-title .add-flag {
+  font-size: 24px;
+  color: #000000;
+  float: left;
+  width: 60px;
+  text-align: center;
+}
+
+.special-process .special-title .options {
+  font-size: 16px;
+  color: #3e3a3a;
+  margin: 0 20px 0 50px;
+  font-weight: bold;
+}
+
+.special-process .special-title .iconfont {
+  float: right;
+  margin-right: 40px;
+  font-size: 20px;
+  color: #9fa0a0;
+}
+
+/*选中样式*/
+.special-process .active-iconfont .iconfont {
+  color: #078446;
+}
+
+.special-process .special-content .special-left {
+  float: left;
+  width: 60px;
+  background-color: #ffffff;
+  min-height: 100px;
+}
+
+.special-process .special-content .special-right {
+  float: left;
+  width: 765px;
+  min-height: 285px;
+  background-color: #f7f8f8;
+  padding: 35px 0 30px 55px;
+}
+
+.special-content .special-right .title {
+  color: #008144;
+  margin-bottom: 30px;
+}
+
+.special-process .special-content {
+  display: none;
+  background-color: #ffffff;
+}
+
+/*显示工艺内容*/
+.special-process .show-content {
+  display: block;
+}
+
+.special-content .special-right .order-item {
+  padding: 10px 0 0;
+}
+
+.special-content .special-right .order-item .item-left {
+  text-indent: 0;
+  width: 150px;
+}
+
+.special-content .special-right .ul-element {
+  width: 560px;
+}
+
+.special-content .special-right .ul-element .list {
+  padding: 0 14px;
+}
+
+.special-content .special-right .ul-element .tips-box {
+  margin: 5px 0 0 15px;
+}
+
+.special-content .special-right .item-right .list {
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+
+.special-content .special-right .other-element {
+  width: 580px;
+  float: left;
+}
+
+.special-content .special-right .other-element .list {
+  width: 138px;
+  padding: 0;
+  min-height: 28px;
+  text-align: center;
+  line-height: 28px;
+  border: 1px solid #d5d5d5;
+  float: left;
+  margin-right: 0;
+  margin-left: -1px;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+}
+
+.special-content .special-right .other-element .active-list {
+  border: 1px solid #07813b;
+  background-color: #e4f8ed !important;
+  z-index: 10;
+}
+
+.special-content .special-right .other-element .tips-box {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  z-index: 9;
+  margin: 0;
+}
+
+.special-content .special-right .other-element .list:hover {
+  z-index: 11;
+}
+
+//其它工艺备注
+.other-process {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+
+  input {
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #d5d5d5;
+    text-indent: 10px;
+  }
+}
+
+/*参数选择*/
+
+/*特殊工艺结束*/
+
+/*组合smt下单*/
+.pcb-smt-title {
+  height: 80px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #efefef;
+
+  .title-text {
+    color: #0b953a;
+
+    & > span {
+      font-size: 24px;
+      margin-right: 25px;
+      color: #3e3a3a;
+    }
+
+    .iconfont {
+      float: right;
+      margin-right: 20px;
+      font-size: 20px;
+      color: #9fa0a0;
+    }
+  }
+
+  .title-left {
+    float: left;
+    width: 60px;
+    height: 80px;
+    text-align: center;
+    background-color: #efefef;
+
+    .iconfont {
+      font-size: 28px;
+      height: 80px;
+      line-height: 80px;
+      border-left: 3px solid #0b953a;
+      width: 57px;
+      display: inline-block;
+    }
+  }
+
+  .title-right {
+    width: 750px;
+    float: left;
+    padding: 25px 0 0 50px;
+  }
+
+}
+
+.active-smt {
+  .title-text {
+
+    .iconfont {
+      color: #0b953a;
+    }
+  }
+}
+
+/*pcb模块结束*/
+
+/*smt模块开始*/
+.smt-box {
+  background-color: #ffffff;
+
+  .smt-left {
+    float: left;
+    width: 60px;
+    height: auto;
+    background-color: #ffffff;
+  }
+
+  .smt-right {
+    float: left;
+    width: 819px;
+    border-left: 1px solid #efefef;
+    padding: 35px 40px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+
+    .order-item {
+      .item-left {
+        width: 146px;
+      }
+    }
+  }
+}
+.group-parent{
+  background: #fff;
+  padding: 0 40px 30px 0;
+}
+/*smt模块结束*/

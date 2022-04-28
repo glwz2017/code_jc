@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .bingLeft {
+            float: left;
+            width: 402px;
+            margin-left: 8px;
+            margin-top: 10px;
+        }
+
+        .datlist {
+            font-size: 12px;
+            list-style: none;
+            color: #333333;
+        }
+
+        .datlist:after {
+            display: block;
+            content: '';
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+
+        .datlist li {
+            width: 200px;
+            height: 120px;
+            border: 1px solid #e1e1e1;
+            float: left;
+            margin-top: -1px;
+            margin-left: -1px;
+            padding: 18px 0 0 18px;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .datlist li:hover .areaname:after {
+            transform: scale(1.1);
+        }
+
+        .areaname {
+            font-size: 16px;
+            position: relative;
+            text-indent: 30px;
+        }
+
+        .areaname:after {
+            display: block;
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 3;
+            transition: all .3s;
+        }
+
+        .areali {
+            margin-top: 12px;
+            font-size: 12px;
+        }
+
+        .areali span {
+            display: block;
+        }
+
+        .dongbei .areaname {
+            color: #334553;
+        }
+
+        .dongbei .areaname:after {
+            background-color: #334553;
+        }
+
+        .huadong .areaname {
+            color: #6f9fa7;
+        }
+
+        .huadong .areaname:after {
+            background-color: #6f9fa7;
+        }
+
+        .huanan .areaname {
+            color: #c9856b;
+        }
+
+        .huanan .areaname:after {
+            background-color: #c9856b;
+        }
+
+        .huabei .areaname {
+            color: #b44038;
+        }
+
+        .huabei .areaname:after {
+            background-color: #b44038;
+        }
+
+        .huazhong .areaname {
+            color: #ca8622;
+        }
+
+        .huazhong .areaname:after {
+            background-color: #ca8622;
+        }
+
+        .xinan .areaname {
+            color: #91c7ae;
+        }
+
+        .xinan .areaname:after {
+            background-color: #91c7ae;
+        }
+
+        .xibei .areaname {
+            color: #749f83;
+        }
+
+        .xibei .areaname:after {
+            background-color: #749f83;
+        }
+
+        .weizhi .areaname {
+            color: #b9a39b;
+        }
+
+        .weizhi .areaname:after {
+            background-color: #b9a39b;
+        }
+    </style>
+</head>
+<body>
+<div class="bingLeft">
+    <ul class="datlist">
+        <li class="dongbei">
+            <div class="areaname">东北地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：1</span>
+                <span class="ordersum">下单总数：2</span>
+                <span class="money">下单总金额：852.00</span>
+            </div>
+        </li>
+        <li class="huadong">
+            <div class="areaname">华东地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：8</span>
+                <span class="ordersum">下单总数：47</span>
+                <span class="money">下单总金额：49294.00</span>
+            </div>
+        </li>
+        <li class="huanan">
+            <div class="areaname">华南地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：4</span>
+                <span class="ordersum">下单总数：14</span>
+                <span class="money">下单总金额：409291.00</span>
+            </div>
+        </li>
+        <li class="huabei">
+            <div class="areaname">华北地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：14</span>
+                <span class="ordersum">下单总数：382</span>
+                <span class="money">下单总金额：451852.00</span>
+            </div>
+        </li>
+        <li class="huazhong">
+            <div class="areaname">华中地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：0</span>
+                <span class="ordersum">下单总数：0</span>
+                <span class="money">下单总金额：0.00</span>
+            </div>
+        </li>
+        <li class="xinan">
+            <div class="areaname">西南地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：0</span>
+                <span class="ordersum">下单总数：0</span>
+                <span class="money">下单总金额：0.00</span>
+            </div>
+        </li>
+        <li class="xibei">
+            <div class="areaname">西北地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：0</span>
+                <span class="ordersum">下单总数：0</span>
+                <span class="money">下单总金额：0.00</span>
+            </div>
+        </li>
+        <li class="weizhi">
+            <div class="areaname">未知地区</div>
+            <div class="areali">
+                <span class="mbNum">下单总人数：4</span>
+                <span class="ordersum">下单总数：6</span>
+                <span class="money">下单总金额：7635.00</span>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

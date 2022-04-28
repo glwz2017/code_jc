@@ -1,0 +1,248 @@
+@import "base-new.less";
+@import "animation.less";
+@import "css-function.less";
+@import "../fonts/iconfont.css";
+
+// 局部颜色
+
+@color008546: #008546;
+@colorf7f8f8: #f7f8f8;
+@colorcbcbcb: #cbcbcb;
+@colorb2b2b2: #b2b2b2;
+@colorececec: #ececec;
+
+* {
+  touch-action: pan-y;
+}
+
+body {
+  background: @colorf7f8f8;
+}
+
+.join-banner {
+  background: url("../images/about-us/join-us-bg.png") no-repeat center #000;
+  height: 220px;
+  min-width: 1280px;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Microsoft YaHei';
+
+  a {
+    color: #fff;
+  }
+
+  .current-location {
+    text-align: right;
+    margin-top: 25px;
+    font-size: 12px;
+    color: #fff;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  .title-des {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .roke-link {
+    font-size: 18px;
+    color: @color008546;
+    text-decoration: underline;
+  }
+}
+
+.jobs-box {
+  margin-top: 43px;
+
+
+  .jobs-content {
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .jobs-title {
+    .heightAndLineHeight(50px, 50px);
+    background: @colorcbcbcb;
+    box-sizing: border-box;
+
+    dd {
+      font-family: 'Microsoft YaHei';
+      display: inline-block;
+      font-size: 14px;
+      color: @color313131;
+      position: relative;
+      width: 24%;
+      text-align: center;
+
+      &:first-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        height: 50%;
+        border-left: 1px solid @colorb2b2b2;
+        .positionL(absolute, 50%, 0, 1);
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+
+  .job-item {
+    border-bottom: 2px solid @colorf7f8f8;
+  }
+
+  .post {
+    .heightAndLineHeight(60px, 60px);
+    font-size: 18px;
+    color: @color313131;
+    background: #fff;
+    cursor: pointer;
+    transition: background-color .2s ease;
+
+    &:hover {
+      background: @color008546;
+
+      dd {
+        color: #fff;
+      }
+    }
+
+    dd {
+      display: inline-block;
+      text-align: center;
+      width: 24%;
+    }
+  }
+
+  .active {
+
+    border-top: 1px solid #fff;
+
+    .post {
+      background: @color008546;
+    }
+
+    dd {
+      color: #fff;
+    }
+  }
+
+  .job-des {
+    padding: 44px 0 44px 50px;
+    box-sizing: border-box;
+    background: #fff;
+    display: none;
+
+    .rules {
+      font-family: 'Microsoft YaHei';
+      font-size: 18px;
+      color: @color008546;
+    }
+
+    .des-title {
+      margin-top: 13px;
+      font-size: 18px;
+      color: @color008546;
+    }
+
+    .rules-des {
+      margin-top: 10px;
+      line-height: 25px;
+      font-size: 14px;
+    }
+  }
+}
+
+.employees-box {
+  background: #fff;
+  margin-top: 70px;
+  padding-bottom: 80px;
+  box-sizing: border-box;
+
+  .tab-parent {
+    border-bottom: 1px solid @colorececec;
+  }
+
+  .employees-tab {
+
+    li {
+      display: inline-block;
+      margin-right: 60px;
+      font-size: 18px;
+      padding: 0 6px;
+      .heightAndLineHeight(70px, 70px);
+      position: relative;
+      cursor: pointer;
+
+      &:before {
+        display: inline-block;
+        content: '';
+        width: 100%;
+        border-bottom: 2px solid @color008546;
+        .opacity(0);
+        .opacityIe(0);
+        .positionLB(absolute, 0, 0, 1);
+      }
+    }
+
+    .active {
+      color: @color008546;
+
+      &:before {
+        .opacity(1);
+        .opacityIe(100);
+      }
+    }
+  }
+
+  .panel-parent {
+    padding-top: 35px;
+
+    .item {
+      .widthAndHeight(300px, 300px);
+      border: 1px solid @colorececec;
+      box-sizing: border-box;
+      padding: 58px 34px 0;
+      margin-left: 23px;
+      display: inline-block;
+      vertical-align: middle;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .item-top {
+      margin-bottom: 40px;
+
+      .name {
+        font-size: 24px;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
+    }
+
+    .info-des {
+      font-size: 14px;
+    }
+  }
+
+  .item-img {
+    .widthAndHeight(410px, 300px);
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

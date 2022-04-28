@@ -1,0 +1,400 @@
+@import "base-new.css";
+@import "../fonts/iconfont.css";
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.news-banner {
+  background: url("../images/news-banner.png") no-repeat center;
+  width: 100%;
+  min-width: 1280px;
+  height: 200px;
+}
+.news-banner .current-position {
+  float: right;
+  margin-top: 30px;
+  font-size: 12px;
+  color: #ffffff;
+}
+.news-banner .current-position a {
+  color: #ffffff;
+  max-width: 170px;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  vertical-align: bottom;
+}
+.show-news {
+  background-color: #f7f8f8;
+}
+.show-news .news-content {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  height: 270px;
+}
+.show-news .headlines-box {
+  position: absolute;
+  top: -130px;
+  height: 320px;
+  width: 880px;
+  z-index: 5;
+}
+.show-news .headlines-box .left-headlines {
+  float: left;
+  width: 580px;
+  height: 320px;
+  overflow: hidden;
+  position: relative;
+}
+.show-news .headlines-box .left-headlines .headlines-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 580px;
+  height: 320px;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+.show-news .headlines-box .left-headlines .headlines-img:first-child {
+  z-index: 12;
+}
+.show-news .headlines-box .left-headlines .headlines-img a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.show-news .headlines-box .left-headlines .headlines-img a img {
+  width: 100%;
+  height: 100%;
+}
+.show-news .headlines-box .left-headlines .control-box {
+  position: absolute;
+  right: 40px;
+  bottom: 30px;
+  z-index: 20;
+  cursor: pointer;
+}
+.show-news .headlines-box .left-headlines .control-box li {
+  float: left;
+  margin-right: 10px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+}
+.show-news .headlines-box .left-headlines .control-box .active-point {
+  background-color: #3e3a3a;
+}
+.show-news .headlines-box .right-headlines {
+  float: right;
+  width: 300px;
+  height: 320px;
+  background-color: #008144;
+  position: relative;
+}
+.show-news .headlines-box .right-headlines .headlines-logo {
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  z-index: 9;
+}
+.show-news .headlines-box .right-headlines .news-box {
+  position: relative;
+  width: 300px;
+  height: 320px;
+}
+.show-news .headlines-box .right-headlines .news-text {
+  width: 230px;
+  height: 240px;
+  color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 17;
+  margin-left: -115px;
+  display: none;
+}
+.show-news .headlines-box .right-headlines .news-text:first-child {
+  display: block;
+}
+.show-news .headlines-box .right-headlines .news-text h3 {
+  font-size: 18px;
+  height: 58px;
+  overflow: hidden;
+  margin-top: 35px;
+}
+.show-news .headlines-box .right-headlines .news-text .text {
+  border-top: 1px solid #04652e;
+  padding-top: 15px;
+}
+.show-news .headlines-box .right-headlines .news-text .text > p {
+  font-size: 14px;
+  height: 86px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.show-news .headlines-box .right-headlines .news-time {
+  margin-top: 30px;
+}
+.show-news .headlines-box .right-headlines .news-time i {
+  float: left;
+  font-size: 16px;
+  display: inline-block;
+  width: 46px;
+  height: 40px;
+  word-break: break-all;
+}
+.show-news .headlines-box .right-headlines .news-time span {
+  font-size: 30px;
+  vertical-align: middle;
+}
+/*新闻导航列表*/
+.list-navigation {
+  cursor: pointer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  width: 880px;
+  border-bottom: 1px solid #e7e7e7;
+  /*激活导航列表*/
+}
+.list-navigation li {
+  float: left;
+  font-size: 18px;
+  height: 46px;
+  color: #3e3a3a;
+  transition: all 0.3s;
+  border-bottom: 2px solid transparent;
+}
+.list-navigation li:hover {
+  color: #008144;
+  border-bottom: 2px solid #008144;
+}
+.list-navigation .active-nav {
+  color: #008144;
+  border-bottom: 2px solid #008144;
+}
+.list-navigation .split-lines {
+  margin: 6px 30px 0;
+  height: 15px;
+  border-left: 1px solid #efefef;
+}
+/*类别展示*/
+.category-box {
+  background-color: #f7f8f8;
+  height: auto;
+  width: 100%;
+  padding: 30px 0 60px;
+}
+.category-box .style-info {
+  float: left;
+  min-height: 700px;
+  width: 885px;
+}
+.style-info .news-lists {
+  min-height: 652px;
+  display: none;
+  position: relative;
+}
+/*新闻显示*/
+.style-info .news-lists:first-child {
+  display: block;
+}
+.style-info .news-lists > .list {
+  background-color: #ffffff;
+  min-height: 100px;
+  transition: all 0.5s;
+}
+.style-info .news-lists > .list > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #efefef;
+}
+.news-lists .list .left-graphic {
+  width: 765px;
+  background-color: #ffffff;
+  display: table-cell;
+  padding: 25px 30px;
+  box-sizing: border-box;
+}
+.news-lists .list .left-graphic .graphic-img {
+  margin-top: 20px;
+  overflow: hidden;
+  width: 440px;
+}
+.news-lists .list .left-graphic .graphic-img > li {
+  float: left;
+  margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+.news-lists .list .left-graphic .graphic-img > li > img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+.news-lists .list .left-graphic > h3 {
+  font-size: 16px;
+  max-height: 48px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.news-lists .list .left-graphic > p {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #3e3a3a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 630px;
+  box-sizing: border-box;
+}
+.news-lists .list .right-time {
+  width: 120px;
+  display: table-cell;
+  vertical-align: top;
+  padding-top: 25px;
+  text-align: center;
+  transition: all 0.3s;
+}
+.news-lists .list .right-time > i {
+  font-size: 16px;
+  word-break: break-all;
+  width: 46px;
+  display: inline-block;
+}
+.news-lists .list .right-time > span {
+  vertical-align: text-bottom;
+  font-size: 30px;
+}
+/*鼠标经过*/
+.style-info .news-lists > .list:hover h3 {
+  color: #008144;
+}
+.style-info .news-lists > .list:hover .right-time {
+  background-color: #008144;
+  color: #ffffff;
+}
+/*右侧在线计价*/
+.right-box {
+  width: 360px;
+  position: absolute;
+  right: 0;
+  top: -130px;
+  z-index: 3;
+}
+.online-invoicing {
+  float: right;
+  width: 360px;
+  height: 430px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #efefef;
+  background-color: #ffffff;
+}
+.online-invoicing > h3 {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #efefef;
+  font-size: 18px;
+  color: #3e3a3a;
+}
+.online-invoicing .components-box {
+  padding: 30px;
+}
+.online-invoicing .components-box .component-item {
+  width: 100%;
+}
+.components-box .component-item input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #efefef;
+  margin: 5px 0 15px 0;
+  text-indent: 10px;
+  background-color: #ffffff;
+}
+/*工艺要求*/
+.components-box .component-item .special-box {
+  width: 137px;
+}
+.components-box .component-item .special-box:first-child {
+  float: left;
+}
+.components-box .component-item .special-box:first-child + .special-box {
+  float: right;
+}
+.special-box ul {
+  margin-top: 5px;
+  cursor: pointer;
+}
+.special-box ul li {
+  float: left;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #efefef;
+  margin-left: 10px;
+}
+.special-box ul li:first-child {
+  margin-left: 0;
+}
+/*激活参数*/
+.special-box ul .active-li {
+  border: 1px solid #0b953a;
+  color: #0b953a;
+}
+.components-box .component-item .btn {
+  margin: 30px 0 0 60px;
+}
+/*广告盒子*/
+.right-box .advertising {
+  margin-top: 20px;
+  float: right;
+  width: 360px;
+  height: 200px;
+}
+/*分页盒子*/
+.pages-box {
+  background-color: #ffffff;
+  border: 1px solid #efefef;
+  padding: 20px 0;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=news.css.map */

@@ -1,0 +1,284 @@
+@import "base-new.less";
+@import "animation.less";
+@import "css-function.less";
+@import "../fonts/iconfont.css";
+
+.m-1100 {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.m-content {
+  background: url(../images/special-column/Banner@bg.jpeg) top center no-repeat;
+}
+
+.m-banner {
+  position: relative;
+  height: 857px;
+  a{
+    display: block;
+    .widthAndHeight(100%,100%);
+  }
+}
+
+
+/*会员福利*/
+.member-benefits {
+  overflow: hidden;
+}
+
+.member-benefits .hd {
+  position: relative;
+  height: 30px;
+  margin-bottom: 50px;
+}
+
+.member-benefits .hd .spacer {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  height: 5px;
+  border-bottom: 1px dashed #dcd9cc;
+}
+
+.member-benefits .hd .dt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  width: 180px;
+  background-color: #fff;
+}
+
+.member-benefits .box .item {
+  float: left;
+  width: 327px;
+  height: 177px;
+  -webkit-transition: All 0.4s ease-in-out;
+  -moz-transition: All 0.4s ease-in-out;
+  -o-transition: All 0.4s ease-in-out;
+  transition: All 0.4s ease-in-out;
+}
+
+.member-benefits .box .item a {
+  height: 177px;
+  display: block;
+  background: url(../images/special-column/Coupons-a@bg.jpg) 2px 0px no-repeat;
+}
+
+.member-benefits .box .item a .price {
+  display: inline-block;
+  width: 150px;
+  margin: 20px 0 0 60px;
+  color: #e02539;
+}
+
+.member-benefits .box .item a .price span {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: arial, helvetica, sans-serif;
+}
+
+.member-benefits .box .item:hover {
+  -webkit-transform: translate(0, -12px);
+  -moz-transform: translate(0, -12px);
+  -o-transform: translate(0, -12px);
+  transform: translate(0, -12px);
+  -ms-transform: translate(0, -12px);
+  background: url(../images/special-column/Coupons-hover@bg.jpg) top no-repeat;
+}
+
+.member-benefits .box .item.mr70 {
+  margin-right: 59px;
+}
+
+/*领取成功弹框提醒*/
+.Get-success-up {
+  display: none;
+  border-radius: 6px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 99999;
+  width: 400px;
+  height: 80px;
+  padding: 50px 0;
+  background-color: #fff;
+}
+
+.Get-success-up em {
+  margin-bottom: 15px;
+}
+
+.Get-success-up a {
+  color: #e02539;
+  text-decoration: underline;
+}
+
+.Get-success-up a:hover {
+  font-weight: bold;
+}
+
+.Get-success-up .close {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+  z-index: 99;
+  cursor: pointer;
+}
+
+/*如何注册*/
+.howto-register {
+  margin-top: 80px;
+  overflow: hidden;
+}
+
+.howto-register .hd {
+  position: relative;
+  height: 30px;
+  margin-bottom: 75px;
+}
+
+.howto-register .hd .spacer {
+  display: inline-block;
+  width: 100%;
+  margin-top: 15px;
+  height: 5px;
+  border-bottom: 1px dashed #dcd9cc;
+}
+
+.howto-register .hd .dt {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  text-align: center;
+  width: 180px;
+  background-color: #fff;
+}
+
+.howto-register .box .item {
+  position: relative;
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+
+.howto-register .box .item p {
+  margin-top: 30px;
+}
+
+.howto-register .box .item .arrow {
+  position: absolute;
+  right: -14px;
+  width: 28px;
+  height: 166px;
+  background: url(../images/special-column/lc-spacer@icon.png) no-repeat top;
+}
+
+/*操作演示*/
+.Focus-operation {
+  overflow: hidden;
+  margin-top: 90px;
+  height: 810px;
+  background: url(../images/special-column/activity-rules@bg.jpg) center no-repeat #f7f7f4;
+}
+
+.Focus-operation .box {
+  position: relative;
+}
+
+.Focus-operation .box .arrow {
+  position: absolute;
+  left: 668px;
+  top: 350px;
+  z-index: 99;
+  width: 76px;
+  height: 101px;
+  background: url(../images/special-column/Mobile-arrow.png);
+  animation: myfirst 0.3s infinite;
+}
+
+@keyframes myfirst {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(-5px, 0);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*注册活动规则*/
+.activity-rules {
+  background-color: #f7f7f4;
+  padding: 50px 0 80px;
+  border-bottom: 1px solid #dcdddd;
+}
+
+.activity-rules .hd {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -39px;
+  margin: auto;
+  z-index: 99;
+  text-align: center;
+  width: 274px;
+  height: 76px;
+  line-height: 65px;
+  background: url(../images/special-column/immediately-register@bt.png);
+}
+
+.activity-rules .box {
+  position: relative;
+  border-radius: 3px;
+  border: 1px dashed #c4c3bb;
+  padding: 3px;
+}
+
+.activity-rules .box .inner {
+  border-radius: 3px;
+  background-color: #fff;
+  padding: 90px 65px;
+}
+
+.activity-rules .box .inner p {
+  margin-bottom: 8px;
+}
+
+.activity-rules .box .inner em {
+  margin-top: 50px;
+  color: #e02539;
+}
+
+/*立即注册*/
+.immediately-register {
+  margin-top: 50px;
+}
+
+.immediately-register a {
+  display: block;
+  width: 324px;
+  height: 57px;
+  margin: 0 auto;
+  color: #fff;
+  background: url(../images/special-column/but@bg.png);
+  text-align: center;
+  line-height: 50px;
+}
+
+.immediately-register a:hover {
+  font-weight: bold;
+}
+

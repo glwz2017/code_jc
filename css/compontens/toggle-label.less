@@ -1,0 +1,49 @@
+// 统一单选复选框
+.toggle-label {
+  .way-label {
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    cursor: pointer;
+
+    input {
+      .opacity(0);
+      .opacityIe(0);
+    }
+
+    input[type="radio"]:checked + .way-radio {
+      &:before {
+        display: block;
+      }
+    }
+
+    input[type="checkbox"]:checked + .way-radio {
+      &:before {
+        display: block;
+      }
+    }
+
+    .way-radio {
+      .positionL(absolute, 0, 0, 1);
+      .widthAndHeight(16px, 16px);
+      border: 1px solid @colorDcdddd;
+      .borderRadius(100%);
+      background: @colore1e1e1;
+      box-sizing: border-box;
+
+      &:before {
+        display: none;
+        content: '';
+        .widthAndHeight(10px, 10px);
+        .positionL(absolute, 2px, 2px, 1);
+        .borderRadius(100%);
+        background: @color008144;
+      }
+    }
+
+    .way-name {
+      margin-left: 10px;
+    }
+  }
+}
+

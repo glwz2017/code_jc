@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--网页标题左侧显示-->
+    <link rel="icon" href="images/jc.png" type="image/x-icon">
+    <!--收藏夹显示图标-->
+    <link rel="shortcut icon" href="images/jc.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/car.css">
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <!--浏览器版本-->
+    <!--[if lte IE 8]>
+    <script>var _iealwn = {once: 0, outver: 8};</script>
+    <script id="_iealwn_js" src="//support.dmeng.net/ie-alert-warning/latest.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--顶部快捷方式-->
+<div class="the-shortcut">
+    <div class="ui-left">
+        PCB制板\ SMT贴装综合服务商
+    </div>
+    <div class="ui-right">
+        <ul class="clearfloat">
+            <li class="js-phone-order">
+                <span class="iconfont">&#xe60c;</span>
+                手机端下单
+            </li>
+            <li class="split-lines"></li>
+            <li>
+                24小时客服：13826578334
+            </li>
+            <li class="split-lines"></li>
+            <li class="add-favorite">
+                收藏本站
+            </li>
+        </ul>
+    </div>
+</div>
+<!--导航-->
+<div class="nav-box js-nav-box clearfloat">
+    <div class="nav-left">
+        <h1>
+            <a href="index.html" class="iconfont">&#xe60d;</a>
+        </h1>
+        <ul class="nav-menu clearfloat">
+            <li class="active-menu">
+                <a href="index.html">首页</a>
+            </li>
+            <li>
+                <a href="smt-order.html">SMT贴片报价</a>
+            </li>
+            <li>
+                <a href="pcb-order.html">PCB打样报价</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">工艺介绍</a>
+                <!--二级菜单-->
+                <ol class="second-menu">
+                    <li>
+                        <a href="smt-introduce.html">SMT介绍</a>
+                    </li>
+                    <li>
+                        <a href="pcb-introduce.html">PCB介绍</a>
+                    </li>
+                    <li>
+                        <a href="material-introduce.html">物料介绍</a>
+                    </li>
+                    <li>
+                        <a href="product-display.html">产品展示</a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="integral/integral-mall.html">积分商城</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">关于我们</a>
+                <!--二级菜单-->
+                <ol class="second-menu">
+                    <li>
+                        <a href="about-us.html">企业简介</a>
+                    </li>
+                    <li>
+                        <a href="news.html">新闻资讯</a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="user-share.html">用户分享</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">帮助中心</a>
+                <!--二级菜单-->
+                <ol class="second-menu">
+                    <li><a href="questions.html">常见问题</a></li>
+                    <li><a href="buy-guide.html">购物指南</a></li>
+                    <li><a href="feedback.html">意见反馈</a></li>
+                    <li><a href="link-us.html">联系我们</a></li>
+                </ol>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-right">
+        <!--未登录-->
+        <div class="no-login">
+            <ul class="clearfloat">
+                <li><a href="jc-login.html">登录</a></li>
+                <li class="split-lines"></li>
+                <li><a href="jc-login.html">注册</a></li>
+            </ul>
+            <!--购物车-->
+            <div class="car-box">
+                <a href="javascript:void(0)">
+                    <span class="iconfont">&#xe600;</span>
+                    99
+                </a>
+            </div>
+        </div>
+        <!--已登录-->
+        <div class="logined">
+            <i class="user-img"><img src="images/user-pic.png" alt="头像" width="40" height="40"></i>
+            <div class="user-info">
+                <span>您好!00379A</span>
+                <span class="iconfont">&#xe629;</span>
+                <!--下拉菜单-->
+                <div class="info-box">
+                    <ul class="info-list">
+                        <li>
+                            <a href="javascript:void(0)">订单管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">个人信息管理</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)">优惠券管理</a>
+                        </li>
+                    </ul>
+                    <a href="javascript:void(0)" class="sign-out">安全退出</a>
+                </div>
+            </div>
+            <!--购物车-->
+            <div class="car-box">
+                <a href="javascript:void(0)">
+                    <span class="iconfont">&#xe600;</span>
+                    99
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <!--购物车-->
+    <div class="car-frame sure-order">
+        <div class="car-content">
+            <div class="car-top">
+                <h2>购物车</h2>
+                <div class="current-location">
+                    您当前位置：<a href="index.html">首页</a> - <a href="car.html">购物车</a>
+                </div>
+            </div>
+            <!--进度指示-->
+            <ul class="progress-indicator">
+                <li class="audit">01.订单审核 <span class="iconfont">&#xe8f2;</span></li>
+                <li class="sure">02.确认订单 <span class="iconfont">&#xe8f2;</span></li>
+                <li>03.付款 <span class="iconfont">&#xe8f2;</span></li>
+                <li>04.交易成功</li>
+            </ul>
+            <!--确定订单内容-->
+            <div class="car-box sure-box">
+                <div class="car-sure-l">
+                    <!--返回-->
+                    <div class="return-up">
+                        <a href="javascript:history.go(-1)">
+                            <span class="iconfont icon-fanhui"></span>
+                            返回购物车
+                        </a>
+                    </div>
+                    <!--发货地址-->
+                    <div class="address-box">
+                        <div class="address-title">
+                            <span>选择送货地址</span>
+                            <a href="javascript:void(0)" class="add-btn js-add-btn">+ 添加收货地址</a>
+                        </div>
+                        <!--无地址提示-->
+                        <div class="no-address">
+                            您还没有收货地址，请添加收货地址！
+                        </div>
+                        <!--各项地址-->
+                        <div class="address-items js-address-items">
+                            <!--激活地址 active-address类名-->
+                            <div class="item active-address">
+                                <label class="address-radio">
+                                    <input type="radio" name="address-radio">
+                                </label>
+                                <div class="detail-address">
+                                    <div class="detail-label">
+                                        收货地址&nbsp;:
+                                    </div>
+                                    <div class="detail-text">
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                    </div>
+                                </div>
+                                <div class="person-info">收件人&nbsp;:&nbsp;&nbsp;<span>张三</span>
+                                    &nbsp;&nbsp;手机&nbsp;:&nbsp;&nbsp;<span>15858282301</span></div>
+                                <div class="edit-box">
+                                    <a href="javascript:void(0)" class="default-btn js-default-btn">默认</a>
+                                    <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                    <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                </div>
+                            </div>
+                            <div class="item ">
+                                <label class="address-radio">
+                                    <input type="radio" name="address-radio">
+                                </label>
+                                <div class="detail-address">
+                                    <div class="detail-label">
+                                        收货地址&nbsp;:
+                                    </div>
+                                    <div class="detail-text">
+                                        浙江 杭州 西湖区华彩国际浙江
+                                    </div>
+                                </div>
+                                <div class="person-info">收件人&nbsp;:&nbsp;&nbsp;<span>张三</span>
+                                    &nbsp;&nbsp;手机&nbsp;:&nbsp;&nbsp;<span>15858282301</span></div>
+                                <div class="edit-box">
+                                    <a href="javascript:void(0)" class="default-btn js-default-btn">默认</a>
+                                    <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                    <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                </div>
+                            </div>
+                            <div class="item ">
+                                <label class="address-radio">
+                                    <input type="radio" name="address-radio">
+                                </label>
+                                <div class="detail-address">
+                                    <div class="detail-label">
+                                        收货地址&nbsp;:
+                                    </div>
+                                    <div class="detail-text">
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                    </div>
+                                </div>
+                                <div class="person-info">收件人&nbsp;:&nbsp;&nbsp;<span>张三</span>
+                                    &nbsp;&nbsp;手机&nbsp;:&nbsp;&nbsp;<span>15858282301</span></div>
+                                <div class="edit-box">
+                                    <a href="javascript:void(0)" class="default-btn js-default-btn">默认</a>
+                                    <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                    <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                </div>
+                            </div>
+                            <div class="item ">
+                                <label class="address-radio">
+                                    <input type="radio" name="address-radio">
+                                </label>
+                                <div class="detail-address">
+                                    <div class="detail-label">
+                                        收货地址&nbsp;:
+                                    </div>
+                                    <div class="detail-text">
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                        浙江 杭州 西湖区华彩国际浙江
+                                    </div>
+                                </div>
+                                <div class="person-info">收件人&nbsp;:&nbsp;&nbsp;<span>张三</span>
+                                    &nbsp;&nbsp;手机&nbsp;:&nbsp;&nbsp;<span>15858282301</span></div>
+                                <div class="edit-box">
+                                    <a href="javascript:void(0)" class="default-btn js-default-btn">默认</a>
+                                    <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                    <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="view-control">
+                            <span class="see-more js-view-address">+查看更多</span>
+                        </div>
+
+                    </div>
+                    <!--选择快递方式-->
+                    <div class="express-way">
+                        <h3>选择快递方式</h3>
+                        <span class="hint">注：配送由于天气、交通等不可抗拒的客观因素造成您收货时间延迟，请您如悉。</span>
+                        <ul class="ways">
+                            <li>
+                                <div class="item">
+                                    <img src="images/suitable-abundant.png" alt="顺丰速运" width="90" height="44">
+                                </div>
+                                <div class="item">
+                                    <label class="way-label" for="sfjf">
+                                        <input type="radio" id="sfjf" name="way-sf" checked>
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">顺丰寄付</span>
+                                        <span class="way-price">￥23元</span>
+                                    </label>
+                                    <label class="way-label" for="df">
+                                        <input type="radio" id="df" name="way-sf">
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">顺丰到付</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <img src="images/de-bont.png" alt="顺丰速运" width="67" height="34">
+                                </div>
+                                <div class="item">
+                                    <label class="way-label" for="de-bont">
+                                        <input type="radio" name="way-sf" id="de-bont">
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">德邦物流</span>
+                                        <span>￥23元</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="item">
+                                    <div class="item">
+                                        <img src="images/Freeshipping.png" alt="顺丰速运" width="90" height="44">
+                                    </div>
+                                    <label class="way-label" for="pack-mail">
+                                        <input type="radio" name="way-sf" id="pack-mail">
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">包邮</span>
+                                    </label>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <!--选择开票信息-->
+                    <div class="the-invoice ">
+                        <div class="invoice-title">
+                            <h3>选择开票信息</h3>
+                            <ul class="invoices js-invoices-style">
+                                <li class="active-radio">
+                                    <label class="way-label" for="none">
+                                        <input type="radio" id="none" name="invoice" checked>
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">不要发票</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="way-label" for="ordinary">
+                                        <input type="radio" id="ordinary" name="invoice">
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">普通发票</span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <label class="way-label" for="add-value">
+                                        <input type="radio" id="add-value" name="invoice">
+                                        <span class="way-radio"></span>
+                                        <span class="way-name">增值发票</span>
+                                    </label>
+                                </li>
+                            </ul>
+                            <!--添加地址-->
+                            <a href="javascript:void(0)" class="add-btn js-add-invoice">+ 添加开票地址</a>
+                        </div>
+                        <!--  默认隐藏-->
+                        <div class="invoice-parent js-invoice-parent" style="display: none">
+                            <!-- 普通发票我才显示-->
+                            <div class="tax-note">
+                                普通税费金额需累计200元后统一开票
+                            </div>
+                            <!--开票公司-->
+                            <div class="invoice-company js-invoice-company">
+                                <div class="company active-company">
+                                    <div class="name-box ">
+                                        <div class="name-item">
+                                            <input type="radio" name="company" id="company1">
+                                            <label for="company1"></label>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>名称：<span>四川久成泰安科技有限公司1</span></p>
+                                            <p>纳税人识别号：<span>91510703MA624DTQ4U</span></p>
+                                        </div>
+                                    </div>
+                                    <!--编辑按钮-->
+                                    <div class="btns-group js-btns-group">
+                                        <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                        <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                    </div>
+                                </div>
+                                <div class="company">
+                                    <div class="name-box ">
+                                        <div class="name-item">
+                                            <input type="radio" name="company" id="company2">
+                                            <label for="company2"></label>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>名称：<span>四川久成泰安科技有限公司2</span></p>
+                                            <p>纳税人识别号：<span>91510703MA624DTQ4U</span></p>
+                                        </div>
+                                    </div>
+                                    <!--编辑按钮-->
+                                    <div class="btns-group js-btns-group">
+                                        <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                        <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                    </div>
+                                </div>
+                                <div class="company">
+                                    <div class="name-box">
+                                        <div class="name-item">
+                                            <input type="radio" name="company" id="company3">
+                                            <label for="company3"></label>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>名称：<span>四川久成泰安科技有限公司3</span></p>
+                                            <p>纳税人识别号：<span>91510703MA624DTQ4U</span></p>
+                                        </div>
+                                    </div>
+                                    <!--编辑按钮-->
+                                    <div class="btns-group js-btns-group">
+                                        <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                        <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                    </div>
+                                </div>
+                                <div class="company">
+                                    <div class="name-box ">
+                                        <div class="name-item">
+                                            <input type="radio" name="company" id="company4">
+                                            <label for="company4"></label>
+                                        </div>
+                                        <div class="info-item">
+                                            <p>名称：<span>四川久成泰安科技有限公司4</span></p>
+                                            <p>纳税人识别号：<span>91510703MA624DTQ4U</span></p>
+                                        </div>
+                                    </div>
+                                    <!--编辑按钮-->
+                                    <div class="btns-group js-btns-group">
+                                        <a href="javascript:void(0)" class="edit-btn js-edit-btn">修改</a>
+                                        <a href="javascript:void(0)" class="del-btn js-del-btn">删除</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="view-control">
+                                <span class="see-more js-view-invoice">+查看更多</span>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--订单列表-->
+                    <div class="order-list">
+                        <h3>订单列表</h3>
+                        <div class="delivery-way">
+                            <span class="way-note">由于钢网生产周期更短您可选择以下发货方式：</span>
+                            <div class="choose-way ">
+                                <label class="way-label">
+                                    <input type="checkbox" checked name="shipment">
+                                    <span class="way-radio"></span>
+                                    <span class="way-name">与SMT订单一起发货（更省运费）</span>
+                                </label>
+                                <!--                            <label class="way-label">-->
+                                <!--                                <input type="radio" name="shipment">-->
+                                <!--                                <span class="way-radio"></span>-->
+                                <!--                                <span class="way-name">钢网单独发货（更省时）</span>-->
+                                <!--                            </label>-->
+                            </div>
+                        </div>
+                        <div class="car-item order-item">
+                            <table cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <th class="info">商品信息</th>
+                                    <th class="the-num">数量</th>
+                                    <th class="amount">金额(元)</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="combined">
+                                            <i><img src="images/smt.png" alt=""></i>
+                                            <div class="product-detail">
+                                                <p>编号: <span>00379A49</span>
+                                                </p>
+                                                <ul class="clearfloat">
+                                                    <li>
+                                                        交期: <span>3-4</span>天
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        工艺要求: <span>有铅</span>
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        是否需要钢网: <span>是</span>
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        焊盘点数: <span>2</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="jump-detail">
+                                                    <a href="javascript:void(0)" class="js-detail"
+                                                       data="1">详细信息</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="combined">
+                                            <i><img src="images/pcb.png" alt=""></i>
+                                            <div class="product-detail">
+                                                <p>编号: <span>00379A49</span>
+                                                </p>
+                                                <ul class="clearfloat">
+                                                    <li>
+                                                        交期: <span>3-4</span>天
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        工艺要求: <span>有铅</span>
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        是否需要钢网: <span>是</span>
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        焊盘点数: <span>2</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="jump-detail">
+                                                    <a href="javascript:void(0)" class="js-detail"
+                                                       data="2">详细信息</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="num">2</p>
+                                        <p class="num">5</p>
+                                    </td>
+                                    <td>
+                                        <p class="combined-price">￥658.00</p>
+                                        <p class="combined-price">￥638.00</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="combined">
+                                            <i><img src="images/smt.png" alt=""></i>
+                                            <div class="product-detail">
+                                                <p>编号: <span>00379A49</span>
+                                                </p>
+                                                <ul class="clearfloat">
+                                                    <li>
+                                                        交期: <span>3-4</span>天
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        工艺要求: <span>有铅</span>
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        是否需要钢网: <span>是</span>
+                                                    </li>
+                                                    <li class="lines"></li>
+                                                    <li>
+                                                        焊盘点数: <span>2</span>
+                                                    </li>
+                                                </ul>
+                                                <div class="jump-detail">
+                                                    <a href="javascript:void(0)" class="js-detail"
+                                                       data="1">详细信息</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p class="num">2</p>
+                                    </td>
+                                    <td>
+                                        <p class="combined-price">￥658.00</p>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="car-sure-r">
+                    <div class="move-parent-area js-move-parent">
+                        <div class="regulations-item">
+                            <div class="pay-item">
+                                <div class="pay-item-l">
+                                    <span class="qianbao"></span>
+                                    使用余额+月结金额支付
+                                </div>
+                                <div class="pay-item-r">
+                                    <label class="way-label">
+                                        <input type="checkbox">
+                                        <span class="way-radio"></span>
+                                        <span class="way-price">￥9768.00</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="regulations-item">
+                            <div class="pay-item">
+                                <div class="pay-item-l">
+                                    <span class="huobiliu"></span> 选择优惠券
+                                </div>
+                                <div class="pay-item-r">
+                                    <div class="coupons-value">
+                                        您有<span>4</span>张优惠券可使用
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coupons-title js-coupons-title">
+                                <div class="coupons-num">
+                                    <div class="coupons-value js-coupons-value">
+
+                                    </div>
+                                    <span class="iconfont icon-xialasanjiao"></span>
+                                </div>
+                                <!--具体列表项-->
+                                <ul class="list js-coupons-lists">
+                                    <li>￥100元抵扣卷(满1000可用)效期至2018/6/28</li>
+                                    <li>￥50元抵扣卷(满500可用)效期至2018/6/28</li>
+                                    <li>￥150元抵扣卷效期至2018/6/28</li>
+                                    <li>￥100元免开钢网费效期至2018/6/28</li>
+                                    <li>不使用，选择后不使用优惠券。</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <div class="balance-info">
+                                <div class="info-item">
+                                    <div class="info-name">
+                                        商品合计：
+                                    </div>
+                                    <div class="info-price expense">
+                                        ¥500.00
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-name">
+                                        使用余额：
+                                    </div>
+                                    <div class="info-price">
+                                        - ¥100.00
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-name">
+                                        优惠券抵扣：
+                                    </div>
+                                    <div class="info-price">
+                                        100.00
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-name">
+                                        税费：
+                                    </div>
+                                    <div class="info-price">
+                                        80.00
+                                    </div>
+                                </div>
+                                <div class="info-item">
+                                    <div class="info-name">
+                                        抵扣：
+                                    </div>
+                                    <div class="info-price">
+                                        0.00
+                                    </div>
+                                </div>
+                            </div>
+                            <!--总计-->
+                            <div class="need-box">
+                                <div class="info-item">
+                                    <div class="info-name">
+                                        实际需付金额：
+                                    </div>
+                                    <div class="info-price">
+                                        ¥100.00
+                                    </div>
+                                </div>
+                                <a href="pay.html" class="pay-btn">去支付</a>
+                                <!--报价合同-->
+                                <div class="quote-contract">
+                                    如需报价合同,可先提交订单再下载报价合同 <a href="订单列表">提交订单</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<div class="copyright-bottom-area">
+    <div class="w-1280">
+        <p>
+            Copyright © 2016 www.jc-pcba.com 版权所有 深圳捷创电子科技有限公司 粤ICP备16117886号-1
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;办公地址：深圳市坂田街道万科星火online七栋234-235室&nbsp;&nbsp;&nbsp;
+                    投诉电话：18033063691&nbsp;&nbsp;&nbsp;企业邮箱：2881601568@qq.com</span>
+        </p>
+    </div>
+</div>
+
+<!--通用弹窗遮罩-->
+<div class="g-mian-bg"></div>
+<!--跳转手机站链接弹窗-->
+<div class="phone-box js-phone-box">
+    <div class="phone-link">
+        <div class="link-left">
+            <h3>
+                捷创移动端网站
+                现已上线
+            </h3>
+            <p>
+                打开您的手机浏览器
+                <br>扫一扫及可进入捷创移动端
+                <br>便可随时随地
+                <br>计价--下单--管理您的订单
+            </p>
+        </div>
+        <img src="images/phone.png" alt="手机" width="340" height="423" class="phone">
+        <div class="link-right">
+            <h6>移动端二维码</h6>
+            <img src="images/phone-qr.png" alt="手机二维码" width="203" height="203">
+        </div>
+        <!--关闭按钮-->
+        <i class="iconfont popup-close js-popup-close">&#xe7be;</i>
+    </div>
+</div>
+<!--右侧分享-->
+<div class="share-box">
+    <!--返回顶部按钮-->
+    <div class="back-btn js-back-btn">
+        <span class="iconfont">&#xe649;</span>
+    </div>
+    <!--每一项-->
+    <ul class="share-lists">
+        <li>
+            <a href="javascript:void(0)">
+                <i>99</i>
+                <span class="iconfont">&#xe611;</span>
+            </a>
+        </li>
+        <li class="phone-btn">
+            <span class="iconfont" title="点击">&#xe60c;</span>
+        </li>
+        <li>
+            <span class="iconfont">&#xe61f;</span>
+            <!--弹出电话-->
+            <div class="tel-popup">24小时客服：13826578334</div>
+        </li>
+        <li>
+            <span class="iconfont">&#xe60b;</span>
+            <!--弹出微信-->
+            <div class="wx-popup">
+                <div class="wexin">
+                    <img src="images/wechat.png" alt="微信" width="127" height="127">
+                    <p>
+                        扫一扫
+                        <br>关注捷创
+                        <br>微信
+                        <br>公众号
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<script src="js/golbal.js"></script>
+<!--layer-->
+<script src="js/layer-v3.1.1/layer/layer.js"></script>
+<script>
+  $(function () {
+
+    // 右侧计价跟随
+    void function () {
+      if ($('.js-move-parent').length > 0) {
+        var diffHeight = $('.js-move-parent').position().top
+        $(window).scroll(function () {
+          if (diffHeight - $(this).scrollTop() <= 40) {
+            $('.js-move-parent').addClass('fixed-el')
+          } else {
+            $('.js-move-parent').removeClass('fixed-el')
+          }
+        })
+      }
+    }()
+
+    //发票类型 【套用删除或对应修改】
+    $(document).on('click', '.js-invoices-style li', function () {
+      $(this).addClass('active-radio').siblings('li').removeClass('active-radio');
+      if ($('.js-invoices-style li:first-child').hasClass('active-radio')) {
+        $('.js-invoice-parent').hide()
+      } else {
+        if ($('.js-invoices-style li').eq(1).hasClass('active-radio')) {
+          $('.js-invoice-parent').find('.tax-note').show()
+        } else {
+          $('.js-invoice-parent').find('.tax-note').hide()
+        }
+        $('.js-invoice-parent').show()
+      }
+    });
+
+
+    //优惠选择
+    $(document).on('click', '.js-preferential .way-item', function () {
+      $(this).addClass('active').siblings().removeClass('active');
+    });
+
+
+    //查看更多
+    $('.js-view-address').click(function () {
+      $('.js-address-items').toggleClass('active');
+      $('.js-address-items').hasClass('active') ? $(this).html('收起') : $(this).html('+查看更多');
+    });
+
+    $('.js-view-invoice').click(function () {
+      $('.js-invoice-company').toggleClass('active');
+      $('.js-invoice-company').hasClass('active') ? $(this).html('收起') : $(this).html('+查看更多');
+    })
+
+    //收货地址添加
+    $('.js-add-btn').click(function () {
+      alert('启用现有网站购物车地址管理弹窗页面');//酌情相关调整
+    });
+    //默认地址选择
+    $(document).on('click', '.js-address-items .js-default-btn', function () {
+      $(this).parents('.item').addClass('active-address')
+        .siblings().removeClass('active-address');
+    });
+    //修改地址
+    $(document).on('click', '.edit-box .js-edit-btn', function () {
+      alert('启用现有网站购物车地址管理弹窗页面');//酌情相关调整
+      return false;//防止事件冒泡
+    });
+    //删除地址
+    $(document).on('click', '.edit-box .js-del-btn', function () {
+      var that = this;
+      layer.confirm('确定要删除吗', {
+        btn: ['确定', '取消'] //按钮
+      }, function () {
+        layer.msg('删除成功', {icon: 1});
+        $(that).parent().parent().remove();
+      });
+      return false; //防止事件冒泡
+    });
+
+    //发货方式选择 暂时注释
+
+    // $('.js-delivery-way li').click(function (e) {
+    //   e.preventDefault();
+    //   $(this).toggleClass('active');
+    //   if ($(this).hasClass('active')) {
+    //     $(this).find('input').prop('checked', true);
+    //   } else {
+    //     $(this).find('input').prop('checked', false);
+    //   }
+    //   // 套用调整
+    //   console.log($(this).find('input').prop('checked'));
+    //
+    // });
+
+    //    物流方式选择
+    // $(document).on('click', '.js-ways li', function (e) {
+    // e.preventDefault();
+    // $(this).addClass('active-way').siblings('li').removeClass('active-way');
+    // $(this).find('input').prop('checked', true).end()
+    //   .siblings('li').find('input').prop('checked', false);
+    // console.log($(this).find('input')[0].checked);
+    // });
+
+
+    //订单参数
+    //详情查看
+    $(document).on('click', '.js-detail', function () {
+      alert('沿用线上弹窗,参考如下');
+      if ($(this).attr('data') === '1') {
+        layer.open({
+          type: 2,
+          area: ['980px', '500px'],
+          title: '订单详细',
+          maxmin: true,
+          content: "smt-info.html"
+        });
+      } else {
+        layer.open({
+          type: 2,
+          area: ['980px', '500px'],
+          title: '订单详细',
+          maxmin: true,
+          content: "pcb-info.html"
+          // content: "http://member.jc-pcba.com/pcb/info/" + 952
+        });
+      }
+    });
+
+    //公司地址删除
+    $(document).on('click', '.js-btns-group .js-del-btn', function () {
+      var that = this;
+      layer.confirm('确定要删除吗', {
+        btn: ['确定', '取消'] //按钮
+      }, function () {
+        layer.msg('删除成功', {icon: 1});
+        $(that).parent().parent().remove();
+      });
+      return false; //防止事件冒泡
+    });
+    //公司地址修改
+    $(document).on('click', '.js-btns-group .js-edit-btn', function (e) {
+      alert('启用现有网站开票管理弹窗页面');//酌情相关调整
+      e.stopPropagation();
+    });
+    //发票公司选择
+    $(document).on('click', '.js-invoice-company .company', function (e) {
+      e.preventDefault();//阻止默认事件
+      $(this).find('input').prop('checked', true).end()
+        .siblings('li').find('input').prop('checked', false);
+      $(this).addClass('active-company').siblings('.company').removeClass('active-company');
+      console.log($(this).find('input')[0].checked);
+    });
+
+    //发票地址添加
+    $('.js-add-invoice').click(function () {
+      alert('启用现有网站发票管理弹窗页面');//酌情相关调整
+    });
+
+    //    标题
+    $('.js-coupons-title').hover(function () {
+      $(this).find('.list').stop().slideDown();
+    }, function () {
+      $(this).find('.list').stop().slideUp();
+    });
+    //优惠券
+    $('.js-coupons-lists li').click(function () {
+      $('.js-coupons-value').html($(this).html());
+      $(this).parent().stop().slideUp();
+    });
+    //账户余额
+    $('.js-account').click(function (e) {
+      e.preventDefault();//阻止默认事件
+      var $accuount = $(this).find('input');
+      $(this).toggleClass('active-account');
+      $(this).hasClass('active-account') ? $accuount.prop('checked', true) : $accuount.prop('checked', false);
+    });
+  });//end function
+</script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+@import "../base-new.less";
+@import "../../fonts/iconfont.css";
+
+body {
+  background-color: #fdf6eb;
+}
+
+//banner
+.crab-banner {
+  background: url("../../images/active/crab-banner.png") no-repeat center top;
+  width: 100%;
+  height: 765px;
+  min-width: 1280px;
+  overflow: hidden;
+  position: relative;
+  z-index: 999;
+  font-family: '宋体';
+
+  .banner {
+    width: 1280px;
+    height: 670px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    z-index: 99;
+
+    .crab-logo {
+      position: absolute;
+      top: 0;
+      left: -45px;
+      z-index: 9;
+    }
+
+    .gifts {
+      margin: 360px auto 0;
+    }
+
+    .crab {
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      margin-left: -110px;
+    }
+
+    .eat-crab {
+      display: block;
+      font-size: 18px;
+      color: #b6231f;
+      position: absolute;
+      bottom: -60px;
+      left: 50%;
+      margin-left: -50px;
+      z-index: 9;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      background-color: #fec66c;
+      //background: linear-gradient(#fec56c,#ffdb9f);
+      background: linear-gradient(#fec56c, #fec974);
+      border-radius: 100%;
+      font-weight: bold;
+      transition: all .3s;
+      box-shadow: 0 0 10px -3px rgba(0, 0, 0, .6);
+
+      i:first-child {
+        margin-top: 24px;
+      }
+
+      &:after {
+        display: block;
+        content: '';
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 9px;
+        left: 9px;
+        z-index: -1;
+        background: linear-gradient(#fec66c, #ffdb9f);
+        border-radius: 100%;
+        border: 1px solid #e99d58;
+      }
+
+      &:hover {
+        transform: scale(1.1) rotate(360deg);
+      }
+
+    }
+  }
+}
+
+//方案
+.plan-box {
+  width: 1200px;
+  margin: 0 auto;
+  height: 425px;
+  position: relative;
+  z-index: 10;
+  font-family: '宋体';
+
+  .semicircle {
+    position: absolute;
+    background: url("../../images/active/plan-bg.png") no-repeat top center;
+    height: 322px;
+    bottom: 0;
+    width: 1200px;
+  }
+
+  .bg {
+    position: absolute;
+    top: -410px;
+    left: 0;
+    z-index: 6;
+    width: 1200px;
+    background: url("../../images/active/carb-bg.png") no-repeat top center #ffffff;
+    height: 323px;
+  }
+
+  .section {
+    background-color: #ffffff;
+    height: 410px;
+    position: absolute;
+    top: -90px;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+
+    .the-solution {
+      margin-top: 120px;
+      height: 120px;
+      position: relative;
+
+      .item {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        position: absolute;
+        left: 104px;
+        color: #b6231f;
+
+        .question {
+          background-color: #fff3e0;
+          display: inline-block;
+          font-size: 16px;
+          color: #724600;
+          width: 240px;
+          height: 36px;
+          line-height: 36px;
+          border-radius: 30px;
+          margin-bottom: 5px;
+        }
+
+        .the-mark {
+          position: absolute;
+          top: -26px;
+          left: 6px;
+          z-index: 6;
+        }
+
+        &:hover .question {
+          background-color: #efe3d1;
+        }
+
+        &:hover .the-mark {
+          transform: rotate(310deg);
+        }
+      }
+    }
+  }
+
+}
+
+//组合板
+.gether-plate {
+  width: 1140px;
+  height: 480px;
+  margin: 0 auto;
+  position: relative;
+  font-family: '宋体';
+  .plate {
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+
+    &:hover .text {
+      color: #e48d00;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .text {
+      font-weight: bold;
+      font-size: 18px;
+      margin-top: 450px;
+      color: #724600;
+    }
+  }
+
+  .steel {
+    background: url("../../images/active/steel.png") no-repeat center;
+    width: 379px;
+    height: 659px;
+    top: -220px;
+    left: 0;
+  }
+
+  .pcb-smt {
+    background: url("../../images/active/pcb-smt.png") no-repeat center;
+    width: 421px;
+    height: 699px;
+    top: -220px;
+    left: 379px;
+    z-index: 9;
+
+    .text {
+      margin-top: 550px;
+    }
+  }
+
+  .ray {
+    background: url("../../images/active/ray.png") no-repeat center;
+    width: 358px;
+    height: 685px;
+    top: -245px;
+    left: 785px;
+
+    .text {
+      margin-top: 510px;
+    }
+  }
+}
+
+.order-box {
+  font-family: '宋体';
+  text-align: center;
+  margin: 50px 0 70px ;
+  .sign-now {
+    font-weight: bold;
+    display: inline-block;
+    min-width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    color: #724600;
+    background-color: #fec56b;
+    padding: 0 25px;
+    border-radius: 30px;
+    margin: 20px auto 0;
+    &:hover{
+      box-shadow: 0 0 6px -2px rgb(0,0,0,.2);
+    }
+  }
+}

@@ -1,0 +1,1039 @@
+@import "css-function.less";
+@import "animation.less";
+@import "compontens/basic-color.less";
+
+// 局部颜色
+@colorc9caca: #c9caca;
+@colora9b7ae: #a9b7ae;
+@color052813: #052813;
+@color9bada2: #9bada2;
+@colorf53848: #f53848;
+@colordcdddd: #dcdddd;
+
+/*订单标题*/
+.denominat-box {
+  background: url("../images/denominated-bg.png") no-repeat center;
+  width: 100%;
+  min-width: 1280px;
+  height: 200px;
+
+  .location-hints {
+    padding-top: 28px;
+    color: #fff;
+    text-align: right;
+    font-size: 12px;
+
+    & > a {
+      color: #ffffff;
+      max-width: 170px;
+      display: inline-block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
+    }
+  }
+
+  .order-step-box {
+    height: 30px;
+    margin-top: 20px;
+    background: @colora9b7ae;
+    padding-left: 20px;
+    cursor: default;
+    .clearF;
+
+    .step-item {
+      float: left;
+      min-width: 102px;
+      line-height: 30px;
+      position: relative;
+      color: @color052813;
+      margin-left: 38px;
+
+      &:last-child {
+        &:before {
+          display: none;
+        }
+      }
+
+      &:before {
+        display: block;
+        content: '';
+        .positionR(absolute, 50%, 0, 2);
+        transform: translateY(-50%);
+        .widthAndHeight(16px, 16px);
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAICAYAAADeM14FAAAAKElEQVQYV2NMqcr+P6dtKiMDFIAZyIJwGZggXACmErcAihYUQ9GtBQCDMxyZzURHZAAAAABJRU5ErkJggg==") no-repeat center @color9bada2;
+        .borderRadius(100%);
+      }
+    }
+  }
+}
+
+
+/*订单盒子开始*/
+.main-order {
+  width: 100%;
+  padding-bottom: 40px;
+  height: auto;
+  background: #f5f5f5;
+  color: #333333;
+  user-select: none;
+  .clearF;
+}
+
+.order-box {
+  width: 1280px;
+  margin: 0 auto;
+  position: relative;
+  top: -80px;
+
+  .order-content {
+    position: relative;
+    .clearF;
+  }
+}
+
+.order-box .order-left {
+  float: left;
+  width: 880px;
+  height: auto;
+}
+
+
+/*订单板类型切换标题开始*/
+.order-left .order-title {
+  height: 80px;
+  background-color: #063117;
+  border-bottom: 1px solid #efefef;
+  border-left: 3px solid #052813;
+}
+
+.order-left .order-title .item {
+  width: 217px;
+  height: 80px;
+  text-align: center;
+  border-right: 1px solid #052813;
+  cursor: pointer;
+  display: table;
+  float: left;
+  transition: all .3s;
+
+  &:last-child {
+    border-right: none;
+    width: 221px;
+  }
+}
+
+.order-left .order-title .item a {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.order-left .order-title .item span {
+  font-size: 16px;
+  color: #007d42;
+  margin-left: 10px;
+}
+
+.order-left .order-title .item:hover {
+  background-color: #ffffff;
+}
+
+/*激活的样式*/
+.order-left .order-title .active {
+  background-color: #ffffff;
+}
+
+/*订单板类型切换标题结束*/
+/*内容区*/
+.order-left {
+  .pcb-content {
+    background-color: #fff;
+
+    .orders-left {
+      width: 60px;
+      height: auto;
+      float: left;
+
+      .iconfont {
+        border-left: 3px solid #0b953a;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        display: inline-block;
+        width: 57px;
+        font-size: 28px;
+        background-color: #efefef;
+      }
+    }
+
+    .orders-right {
+      float: left;
+      padding: 35px 40px;
+      width: 820px;
+      box-sizing: border-box;
+      border-left: 1px solid #efefef;
+    }
+  }
+}
+
+.purchasing-box {
+  margin-bottom: 10px;
+  .clearF;
+
+  .purchasing {
+    float: left;
+    .widthAndHeight(200px, 60px);
+    border: 1px solid @colorEfefef;
+    text-align: center;
+    line-height: 60px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 18px;
+
+    .iconfont {
+      font-size: 30px;
+      vertical-align: middle;
+      color: @colorc9caca;
+      margin-right: 4px;
+    }
+
+    &:hover {
+      border: 1px solid @color008144;
+    }
+  }
+
+  .active {
+    border: 1px solid @color008144;
+
+    .iconfont {
+      color: @color008144;
+    }
+  }
+}
+
+//pcb-order
+.order-left .pcb-order .orders-right {
+  padding-left: 20px;
+}
+
+/*每项计价公用开始*/
+.order-item {
+  *min-height: 50px;
+  position: relative;
+  padding: 10px 0;
+  .clearF;
+}
+
+.order-item .item-left {
+  width: 146px;
+  min-height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  text-indent: 15px;
+  position: relative;
+}
+
+/*星号必填样式*/
+.item-left .flag {
+  font-size: 20px;
+  position: absolute;
+  left: -2px;
+  top: 37%;
+  line-height: 8px;
+  color: #00a964;
+  text-indent: 0;
+}
+
+.item-right {
+  input {
+    width: 190px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid @colordcdddd;
+    text-indent: 15px;
+    margin-right: 10px;
+  }
+
+  label {
+    display: inline-block;
+    min-width: 25px;
+    padding: 0 5px;
+    height: 28px;
+    text-align: center;
+    line-height: 28px;
+    background-color: #f7f8f8;
+    border: 1px solid @colordcdddd;
+    margin-left: -17px;
+  }
+
+  .list {
+    min-height: 28px;
+    padding: 0 15px;
+    text-align: center;
+    line-height: 28px;
+    border: 1px solid #d5d5d5;
+    float: left;
+    margin: 0 0 0 -1px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+
+    &:hover {
+      border: 1px solid #07813b;
+      z-index: 3;
+    }
+
+  }
+
+  .active-list {
+    border: 1px solid #07813b;
+    background-color: #e4f8ed !important;
+    z-index: 3;
+  }
+
+  .disabled {
+    background-color: #f7f8f8;
+    cursor: not-allowed !important;
+    color: #727171;
+
+    &:hover {
+      border: 1px solid #d5d5d5;
+    }
+  }
+}
+
+.more-each {
+  .list {
+    margin-bottom: 9px;
+  }
+}
+
+.report-item {
+  .item-left {
+    line-height: 18px;
+    text-indent: 0;
+    padding-left: 15px;
+    box-sizing: border-box;
+  }
+}
+
+.download-btn {
+  color: @colorf53848;
+  .heightAndLineHeight(30px, 30px);
+  text-decoration: underline;
+  display: inline-block;
+  margin-left: 24px;
+}
+
+.add-report {
+  padding-top: 0;
+}
+
+.item-right {
+  .report-list {
+    float: left;
+
+    &:first-child {
+      margin-right: 16px;
+    }
+
+    .iconfont {
+      font-size: 20px;
+      color: @color008144;
+      vertical-align: middle;
+    }
+
+    .report-val {
+      width: 270px;
+    }
+  }
+}
+
+/*参数单位*/
+.item-right .unit-mm {
+  float: left;
+  background-color: #f7f8f8;
+  border: 1px solid #dcdddd;
+  width: 30px;
+  height: 28px;
+  line-height: 25px;
+  display: inline-block;
+  font-size: 13px;
+  text-align: center;
+  transition: all .3s ease-in;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.order-item .item-left, .item-right, .item-pic {
+  float: left;
+}
+
+.order-item {
+  .item-pic {
+    margin: 0 10px 0 20px;
+    min-width: 64px;
+  }
+
+  .item-note {
+    color: @colorf53848;
+    float: left;
+    .heightAndLineHeight(30px, 30px);
+  }
+
+  .baking-time {
+    float: left;
+    margin-left: 40px;
+    display: none;
+
+    .baking-label {
+      float: left;
+      .heightAndLineHeight(30px, 30px);
+      margin-right: 10px;
+    }
+  }
+}
+
+.item-right textarea {
+  width: 570px;
+  height: 88px;
+  border: 1px solid #e5e5e5;
+  resize: none;
+  padding: 5px 10px;
+  box-sizing: border-box;
+}
+
+//单选按钮
+.item-right .radio-item {
+
+  font-size: 12px;
+
+  label {
+    min-width: 25px;
+    padding: 0 5px;
+    height: 28px;
+    display: block;
+    text-align: left;
+    line-height: 28px;
+    background-color: #ffffff;
+    border: none;
+    margin-left: 0;
+    cursor: pointer;
+
+    input {
+      width: 16px;
+      height: 16px;
+      line-height: 28px;
+      border: 1px solid #d5d5d5;
+      margin-right: 10px;
+      vertical-align: middle;
+    }
+
+    span {
+      color: #999;
+    }
+  }
+}
+
+/*参数提示开始*/
+.tips-box {
+  float: right;
+  position: relative;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+  color: #ffa300;
+  margin: 5px 16px 0 0;
+  cursor: pointer;
+}
+
+.tips-box .iconfont {
+  float: right;
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.tips-box .tips-text {
+  position: absolute;
+  min-height: 15px;
+  line-height: 15px;
+  padding: 10px;
+  min-width: 250px;
+  top: 20px;
+  font-size: 12px;
+  left: 0;
+  color: #f4ae3f;
+  box-shadow: 0 0 1px 0 #f4ae3f;
+  display: none;
+  z-index: 998;
+  background-color: #ffffff;
+  text-indent: 0;
+}
+
+.tips-box:hover .tips-text {
+  display: block;
+}
+
+//重置按钮
+.rest-btn {
+  background-color: transparent;
+  color: #3e3a3a;
+  border: 1px solid #9fa0a0;
+  box-shadow: none;
+}
+
+/*参数提示结束*/
+/*每项计价公用结束*/
+/*计价右侧部分开始*/
+.main-order .order-box .order-right {
+  float: right;
+  width: 360px;
+  overflow: hidden;
+}
+
+.main-order .order-box .order-right .move-price {
+  transition: all 0.3s;
+  z-index: 6;
+}
+
+/*未下单样式*/
+.order-box .order-right .combined-box {
+  position: relative;
+  z-index: 9;
+  height: auto;
+  width: 360px;
+  border-bottom: 1px solid #efefef;
+  background-color: #ffffff;
+}
+
+.order-box .order-right .not-place,
+.in-calculation {
+  height: 80px;
+}
+
+.refer-tips {
+  background-color: #ffffff;
+  height: 44px;
+  text-align: right;
+  line-height: 44px;
+  cursor: pointer;
+}
+
+.refer-tips .the-reset {
+  width: 140px;
+  line-height: 44px;
+  color: #3e3a3a;
+  display: block;
+  float: left;
+  text-align: center;
+  background-color: #ffffff;
+  transition: all 0.3s;
+}
+
+.refer-tips .the-reset:hover {
+  color: #b21f1f;
+}
+
+.refer-tips .the-offer {
+  float: left;
+  width: 218px;
+  height: 42px;
+  line-height: 44px;
+  border: 1px solid #05732b;
+  text-align: center;
+  background-color: #0b953a;
+  color: #ffffff;
+  font-size: 14px;
+  transition: all 0.3s;
+
+  &:hover {
+    background-color: #05732b;
+  }
+}
+
+//新加计价按钮
+.group-box {
+  text-align: right;
+  background: #fff;
+
+  .btn {
+    width: 136px;
+    margin-left: 15px;
+    font-size: 14px;
+    height: 38px;
+    line-height: 38px;
+  }
+
+  .rest-btn {
+    background-color: transparent;
+    color: #3e3a3a;
+    border: 1px solid #9fa0a0;
+    box-shadow: none;
+  }
+}
+
+.order-box .order-right .in-calculation {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  background-color: #f8f8f8;
+  padding: 25px 30px 0;
+  box-sizing: border-box;
+  display: none;
+}
+
+.order-box .order-right .in-calculation .in-left {
+  float: left;
+  font-size: 24px;
+  color: #3e3a3a;
+}
+
+.order-box .order-right .in-calculation .in-right {
+  float: right;
+  background: url("../images/price-load.gif") no-repeat center;
+  width: 48px;
+  height: 48px;
+  margin-top: -8px;
+}
+
+.order-box .order-right .in-calculation .in-right .iconfont {
+  font-size: 36px;
+  line-height: 36px;
+}
+
+.order-box .order-right .not-place {
+  padding: 20px 30px 0;
+  box-sizing: border-box;
+  background-color: #f7f8f8;
+}
+
+.not-place .place-left {
+  float: left;
+  font-size: 18px;
+  color: #3e3a3a;
+}
+
+.not-place .place-right {
+  float: right;
+  text-align: right;
+}
+
+.not-place .place-right > p {
+  color: @colorf53848;
+  font-size: 18px;
+}
+
+/*广告盒子*/
+.advertising {
+  margin: 20px 0;
+}
+
+/*已下单样式*/
+.order-box .order-right .denominated-box {
+  position: relative;
+  display: none;
+  width: 360px;
+
+  .denominated-title {
+    .heightAndLineHeight(50px, 50px);
+    background-color: #ffffff;
+    color: #3e3a3a;
+    text-indent: 26px;
+    font-size: 14px;
+    font-weight: bold;
+
+    span {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}
+
+.order-box .order-right .denominated-box > h2 {
+  font-size: 18px;
+  color: #008144;
+  height: 60px;
+  line-height: 60px;
+  text-align: left;
+  padding-left: 30px;
+  border-bottom: 1px solid #efefef;
+  background-color: #ffffff;
+}
+
+/*生成周期盒子*/
+.production-cycle {
+  background-color: #efefef;
+
+  .delivery-title {
+    .clearF;
+    .heightAndLineHeight(30px, 30px);
+    margin: 0 auto;
+
+    .time {
+      float: left;
+      width: 110px;
+      text-align: center;
+    }
+
+    .price {
+      float: right;
+      margin-right: 26px;
+    }
+  }
+}
+
+
+/*交期选择*/
+.delivery-option {
+  width: 336px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+  li {
+    width: 100%;
+    .heightAndLineHeight(32px, 32px);
+    background-color: #e2e2e2;
+    margin-bottom: 1px;
+    border-radius: 2px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    cursor: pointer;
+
+    .time {
+      float: left;
+      height: 32px;
+
+      .iconfont {
+        opacity: 0;
+        margin-right: 2px;
+        vertical-align: middle;
+      }
+    }
+
+    .price {
+      float: right;
+    }
+  }
+
+  /*选中交期*/
+
+  .active-option {
+    color: #0b953a;
+    background-color: #ffffff;
+
+    .time {
+      .iconfont {
+        opacity: 1;
+      }
+    }
+
+  }
+}
+
+//物流
+.logistics-box {
+  background-color: #ffffff;
+  padding: 12px;
+
+  .logistics {
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 10px;
+
+    //物流选择
+    .way {
+      display: none; //暂时隐藏  暂时隐藏  暂时隐藏
+      select {
+        border: 1px solid #efefef;
+        border-radius: 4px;
+        .widthAndHeight(130px, 28px);
+        line-height: 28px;
+        text-indent: 5px;
+        box-shadow: 0 0 6px -2px rgba(0, 0, 0, .2) inset;
+
+        &:first-child + select {
+          width: 90px;
+        }
+      }
+
+      .price {
+        float: right;
+        .heightAndLineHeight(28px, 28px);
+      }
+    }
+
+    //  预计物流时间
+    .estimated-time {
+      margin-top: 22px;
+      display: none; //暂时隐藏  暂时隐藏  暂时隐藏
+      .clearF;
+
+      .item {
+        float: left;
+        width: 72px;
+
+        .time {
+          color: #00844d;
+        }
+
+        .iconfont {
+          vertical-align: middle;
+          color: #dcdddd;
+        }
+
+        &:last-child {
+          text-align: right;
+        }
+      }
+
+      .line {
+        float: left;
+        width: 165px;
+        height: 30px;
+        border-bottom: 1px #ccc dashed;
+        position: relative;
+
+        .logistics-car {
+          font-size: 30px;
+          line-height: 30px;
+          color: #0b953a;
+          padding: 0 5px;
+          background-color: #ffffff;
+          .positionL(absolute, 10px, 50%, 3);
+          margin-left: -15px;
+          animation: animateCar 1.1s infinite ease;
+        }
+      }
+    }
+
+    //  交期规则
+    .delivery-rules {
+      //margin-top: 15px;  暂时隐藏
+
+      .rules {
+        display: block;
+        text-align: right;
+        color: @colorf53848;
+        text-decoration: underline;
+      }
+
+      .delivery-tips {
+        margin-top: 5px;
+        border-radius: 2px;
+        padding: 15px;
+        background-color: #fbf2e8;
+        color: #ffa239;
+      }
+    }
+  }
+}
+
+.order-box {
+  .order-right {
+    .production-cycle {
+      .not-place {
+        background-color: #ffffff;
+        position: relative;
+      }
+
+      //是否需要焊接服务
+      .welding-service {
+        padding: 0 30px;
+        height: 42px;
+        background: #ffffff;
+        box-sizing: border-box;
+
+        .welding-box {
+          background: #efefef;
+          padding: 3px 10px;
+          height: 34px;
+          line-height: 26px;
+          border-radius: 2px;
+          box-sizing: border-box;
+
+          .welding-text {
+            float: left;
+          }
+
+          .welding-check {
+            float: left;
+            margin-left: 20px;
+            vertical-align: middle;
+            cursor: pointer;
+
+            label {
+              position: relative;
+
+              .iconfont {
+                color: #9fa0a0;
+                .positionL(absolute, -5px, 0, 3);
+              }
+
+              margin-right: 12px;
+            }
+
+            input[type="radio"] {
+              vertical-align: middle;
+              margin-right: 6px;
+              opacity: 0;
+              filter: alpha(opacity=0);
+            }
+
+            .active-check {
+              .iconfont {
+                color: #078446;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*smt 与 pcb 总计*/
+.price-box {
+  border-top: 1px solid #efefef;
+}
+
+.jc-item {
+  border-bottom: 1px solid #efefef;
+  padding-right: 30px;
+  box-sizing: border-box;
+  padding-left: 30px;
+  background-color: #ffffff;
+
+
+  .offer-box {
+    .clearF;
+    padding: 16px 0;
+
+    .left-offer {
+      float: left;
+
+      .view-quote {
+        margin-left: 20px;
+        color: @colorf53848;
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+
+    .right-offer {
+      .style-price {
+        float: right;
+
+        span {
+          float: right;
+        }
+      }
+    }
+  }
+
+  //费用明细
+  .cost-detail {
+    padding-bottom: 15px;
+    display: none;
+  }
+}
+
+/*结算价格总计*/
+.settlement-price {
+  background-color: #efefef;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.settlement-price .add-cart {
+  height: 44px;
+  background-color: #ffffff;
+  border-top: 1px solid #f8f8f8;
+  font-size: 14px;
+  .clearF;
+}
+
+.settlement-price .the-rest {
+  width: 140px;
+  height: 44px;
+  line-height: 44px;
+  float: left;
+}
+
+.settlement-price .to-cart {
+  float: left;
+  width: 218px;
+  line-height: 42px;
+  border: 1px solid #c62c39;
+  color: #fff;
+  background-color: @colorf53848;
+}
+
+
+//交期规则提示
+.delivery-rules-tips {
+  .widthAndHeight(460px, 220px);
+  .dialogCenter(-110px, -230px, 9999999);
+  background-color: #ffffff;
+  box-shadow: 0 0 30px -3px rgba(0, 0, 0, .3);
+  padding: 40px 35px 0;
+  .boxSizing();
+  color: #3e3a3a;
+  display: none;
+
+  .tips-title {
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .tips-text {
+    font-size: 14px;
+
+    .contact-way {
+      color: #00a964;
+
+      &:hover {
+        color: #b21f1f;
+      }
+    }
+  }
+
+  .i-know {
+    font-size: 12px;
+    .heightAndLineHeight(30px, 30px);
+    width: 140px;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: none;
+    transition: all .3s;
+    float: right;
+
+    &:hover {
+      background-color: #00844d;
+    }
+  }
+}
+
+//沟通弹窗
+#newBridge {
+  position: relative !important;
+  z-index: 3 !important;
+}
+
+/*右侧计价部分结束*/
+
+//手机端弹窗
+.g-mian-bg {
+  z-index: 9999999;
+}
+
+.phone-box {
+  z-index: 99999991;
+}
+
+/*# sourceMappingURL=order-common.css.map */

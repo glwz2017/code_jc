@@ -1,0 +1,204 @@
+@import "base-new.css";
+@import "animation.less";
+@import "css-function.less";
+@import "../fonts/iconfont.css";
+
+.banner-box {
+  height: 700px;
+  background: url("../images/gift-active/banner-bg.jpg") no-repeat center #001822;
+
+  .banner-des-box {
+    box-sizing: border-box;
+    padding: 170px 0 0 14px;
+    position: relative;
+
+    .jump-link {
+      display: block;
+      width: 500px;
+      height: 78px;
+      .positionLB(absolute, 0, 0, 1);
+    }
+  }
+
+}
+
+.banner-body {
+  background: #008144;
+  height: 957px;
+
+  .w-1280 {
+    .clearF;
+  }
+
+  .body-l {
+    float: left;
+    padding-top: 88px;
+  }
+
+  .body-r {
+    float: right;
+    width: 650px;
+
+    .trait-box {
+      position: relative;
+      background: url("../images/gift-active/trait-bg.png") no-repeat center;
+      height: 530px;
+      width: 650px;
+      border-left: 1px solid #00723c;
+      border-right: 1px solid #00723c;
+      overflow: hidden;
+
+      .trait-name {
+        font-size: 24px;
+        color: #beffaa;
+        line-height: 30px;
+        padding: 80px 0 0 77px;
+        box-sizing: border-box;
+      }
+
+      .circular-icon {
+        overflow: hidden;
+        width: 34px;
+        height: 34px;
+        position: relative;
+        margin-left: 70px;
+        margin-top: 4px;
+
+        img {
+          position: relative;
+          left: -30px;
+          width: 34px;
+          height: 34px;
+          filter: drop-shadow(#beffaa 30px 0);
+        }
+      }
+
+      .trait-cell {
+        position: absolute;
+        cursor: default;
+        width: 170px;
+        height: 150px;
+        color: #008144;
+        font-size: 14px;
+        text-align: center;
+
+        &:hover {
+          font-size: 15px;
+        }
+
+        .text {
+          display: table-cell;
+          vertical-align: middle;
+          width: 170px;
+          height: 150px;
+          font-weight: bold;
+          padding-bottom: 10px;
+        }
+
+        &.cell1 {
+          top: 40px;
+          right: 170px;
+        }
+
+        &.cell2 {
+          top: 116px;
+          right: 42px;
+        }
+
+        &.cell3 {
+          top: 264px;
+          right: 42px;
+        }
+
+        &.cell4 {
+          bottom: 42px;
+          right: 170px;
+        }
+
+        &.cell5 {
+          top: 264px;
+          left: 180px;
+        }
+
+        &.cell6 {
+          bottom: 42px;
+          left: 50px;
+        }
+      }
+    }
+
+    .trait-rules {
+      width: 650px;
+      background: url("../images/gift-active/rules-bg.png") no-repeat center top #E2FADB;
+      border-radius: 0 0 10px 10px;
+      padding: 46px 52px;
+      box-sizing: border-box;
+
+      h6 {
+        font-size: 16px;
+        color: #313131;
+        font-weight: bold;
+      }
+
+      .rules-lists {
+        margin: 10px 0 16px 0;
+
+        dd {
+          font-size: 16px;
+          color: #313131;
+          line-height: 24px;
+        }
+      }
+    }
+
+    .rules-time {
+
+      padding: 16px 0;
+      border-top: 1px solid #c4e2d4;
+      border-bottom: 1px solid #c4e2d4;
+      display: table-cell;
+      vertical-align: middle;
+      width: 550px;
+      font-size: 0;
+      position: relative;
+
+
+      .rules-el {
+        display: inline-block;
+        width: 49%;
+        font-size: 12px;
+        position: relative;
+        padding-left: 34px;
+        box-sizing: border-box;
+
+        &:first-child {
+          padding-left: 0;
+
+          &:before {
+            display: block;
+            content: '';
+            height: 100%;
+            border-right: 1px solid #c4e2d4;
+            .positionR(absolute, 0, 0, 1);
+            //transform: translateX(-50%) translateY(-50%);
+          }
+        }
+      }
+
+      .rules-des {
+        font-size: 24px;
+        color: #008144;
+        font-weight: bold;
+      }
+    }
+
+    .power-tips{
+      color: #008144;
+      margin-top: 12px;
+    }
+  }
+}
+
+.four-guarante {
+  border-top: 0;
+}

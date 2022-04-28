@@ -1,0 +1,351 @@
+@import "base-new.css";
+@import "../fonts/iconfont.css";
+.textEellipsis {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.clearF:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.userSelect {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+}
+.totalIconCss {
+  font-family: "iconfont" !important;
+  font-size: 12px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: #efefef;
+}
+.detail-content {
+  /*右侧在线计价*/
+}
+.detail-content .detail-top {
+  width: 1280px;
+  height: 40px;
+  margin: 40px auto 0;
+}
+.detail-content .detail-top:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.detail-content .detail-top .share-section {
+  float: left;
+}
+.detail-content .detail-top .share-section .name {
+  font-size: 30px;
+  color: #009357;
+  font-weight: 700;
+  vertical-align: middle;
+}
+.detail-content .detail-top .share-section .share-btn {
+  display: inline-block;
+  width: 146px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 20px;
+  -ms-border-raius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  color: #fff;
+  font-size: 14px;
+  background: #009357;
+  margin-left: 25px;
+}
+.detail-content .detail-top .share-section .share-btn:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.detail-content .detail-top .current-position {
+  float: right;
+  margin-top: 20px;
+}
+.detail-content .detail-top .current-position a {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  max-width: 170px;
+  vertical-align: bottom;
+}
+.detail-content .content {
+  width: 1280px;
+  margin: 30px auto 60px;
+}
+.detail-content .content:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.detail-content .detail-box {
+  float: left;
+  width: 850px;
+  background: #fff;
+  border-radius: 6px;
+  -ms-border-raius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  min-height: 500px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.detail-content .detail-box .info-top:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.detail-content .detail-box .info-top .guest-info {
+  float: left;
+}
+.detail-content .detail-box .info-top .guest-info:after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 0;
+  clear: both;
+}
+.detail-content .detail-box .info-top .guest-info .guest-img {
+  border-radius: 100%;
+  -ms-border-raius: 100%;
+  -moz-border-radius: 100%;
+  -webkit-border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  background: #efefef;
+  float: left;
+  position: relative;
+}
+.detail-content .detail-box .info-top .guest-info .guest-img img {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 3;
+}
+.detail-content .detail-box .info-top .guest-info .guest-text {
+  float: left;
+  color: #3e3a3a;
+  margin: 14px 0 0 20px;
+}
+.detail-content .detail-box .info-top .guest-info .guest-text .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+.detail-content .detail-box .info-top .guest-info .guest-text .des {
+  margin-top: 4px;
+}
+.detail-content .detail-box .info-top .guest-info .guest-text .des .location {
+  margin-right: 20px;
+}
+.detail-content .detail-box .info-top .score-box {
+  float: right;
+  font-size: 12px;
+  color: #3e3a3a;
+  margin-top: 36px;
+}
+.detail-content .detail-box .info-top .score-box .rate {
+  display: inline-block;
+  margin-left: 15px;
+}
+.detail-content .detail-box .info-top .score-box .rate .iconfont {
+  color: #dadada;
+  font-size: 20px;
+}
+.detail-content .detail-box .info-top .score-box .rate .active {
+  color: #f5344b;
+}
+.detail-content .detail-box .article-box {
+  margin-top: 20px;
+  border-top: 1px solid #eeeeee;
+  padding: 20px 0;
+  min-height: 320px;
+}
+.detail-content .detail-box .article-box img {
+  display: block;
+  max-width: 100%;
+  margin: 6px 0;
+}
+.detail-content .detail-box .give-like {
+  height: 40px;
+  position: relative;
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+.detail-content .detail-box .give-like:before {
+  display: block;
+  content: '';
+  width: 100%;
+  border-top: 1px dashed #eeeeee;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 3;
+}
+.detail-content .detail-box .give-like .like-btn {
+  display: inline-block;
+  background: #fff;
+  font-size: 14px;
+  border: 1px solid #9fa0a0;
+  width: 156px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  -ms-border-raius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  position: relative;
+  z-index: 5;
+  color: #3e3a3a;
+}
+.detail-content .detail-box .give-like .like-btn:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.detail-content .detail-box .give-like .like-btn .icon-dianzan {
+  display: inline-block;
+  color: #9fa0a0;
+  font-size: 20px;
+  line-height: 20px;
+}
+@keyframes niceIn {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+    color: #ef7000;
+  }
+}
+.detail-content .detail-box .give-like .active .icon-dianzan {
+  color: #ef7000;
+  -webkit-animation: niceIn 0.6s 0.1s ease;
+  -moz-animation: niceIn 0.6s 0.1s ease;
+  -o-animation: niceIn 0.6s 0.1s ease;
+  animation: niceIn 0.6s 0.1s ease;
+}
+.detail-content .right-box {
+  float: right;
+  width: 360px;
+  /*工艺要求*/
+  /*广告盒子*/
+}
+.detail-content .right-box .online-invoicing {
+  float: right;
+  width: 360px;
+  height: 430px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #efefef;
+  background-color: #ffffff;
+}
+.detail-content .right-box .online-invoicing > h3 {
+  height: 60px;
+  line-height: 60px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #efefef;
+  font-size: 18px;
+  color: #3e3a3a;
+}
+.detail-content .right-box .online-invoicing .components-box {
+  padding: 30px;
+}
+.detail-content .right-box .online-invoicing .components-box .component-item {
+  width: 100%;
+}
+.detail-content .right-box .online-invoicing .components-box .component-item input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #efefef;
+  margin: 5px 0 15px 0;
+  text-indent: 10px;
+  background-color: #ffffff;
+}
+.detail-content .right-box .online-invoicing .components-box .component-item .special-box {
+  width: 137px;
+}
+.detail-content .right-box .online-invoicing .components-box .component-item .special-box:first-child {
+  float: left;
+}
+.detail-content .right-box .online-invoicing .components-box .component-item .special-box:first-child + .special-box {
+  float: right;
+}
+.detail-content .right-box .online-invoicing .components-box .component-item .btn {
+  margin: 30px 0 0 60px;
+}
+.detail-content .right-box .special-box ul {
+  margin-top: 5px;
+  cursor: pointer;
+  /*激活参数*/
+}
+.detail-content .right-box .special-box ul li {
+  float: left;
+  width: 60px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border: 1px solid #efefef;
+  margin-left: 10px;
+}
+.detail-content .right-box .special-box ul li:first-child {
+  margin-left: 0;
+}
+.detail-content .right-box .special-box ul .active-li {
+  border: 1px solid #0b953a;
+  color: #0b953a;
+}
+.detail-content .right-box .advertising {
+  margin-top: 20px;
+  float: right;
+  width: 360px;
+  height: 200px;
+}
+.move-number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  font-size: 12px;
+  line-height: 30px;
+  color: #ef7000;
+}
+/*# sourceMappingURL=share-detail.css.map */
