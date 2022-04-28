@@ -94,12 +94,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .banner-box {
-  height: 700px;
+  height: 650px;
   background: url("../images/gift-active/banner-bg.jpg") no-repeat center #001822;
 }
 .banner-box .banner-des-box {
   box-sizing: border-box;
-  padding: 170px 0 0 14px;
+  padding: 100px 0 0 14px;
   position: relative;
 }
 .banner-box .banner-des-box .jump-link {
